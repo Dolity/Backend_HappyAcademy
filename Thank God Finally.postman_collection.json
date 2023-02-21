@@ -1,0 +1,430 @@
+{
+	"info": {
+		"_postman_id": "e169aacc-1e8c-4ab0-a541-a6b49b073105",
+		"name": "Thank God Finally",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23711642"
+	},
+	"item": [
+		{
+			"name": "product",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "getAllProduct",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.1:3100/getAllProduct",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"1"
+							],
+							"port": "3100",
+							"path": [
+								"getAllProduct"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "getSearchCarStyleSize",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.1.8:3100/getSearchCarStyleSize?bandname=ISU&type=1&name=Small",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"1",
+								"8"
+							],
+							"port": "3100",
+							"path": [
+								"getSearchCarStyleSize"
+							],
+							"query": [
+								{
+									"key": "bandname",
+									"value": "ISU",
+									"description": "ISU, SCA"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"description": "1=Color, 2=Paint"
+								},
+								{
+									"key": "name",
+									"value": "Small",
+									"description": "Small, Medium, Large"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "getAllProductButLimit",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.1:3100/getAllProductButLimit?limit=10",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"1"
+							],
+							"port": "3100",
+							"path": [
+								"getAllProductButLimit"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "getdataLimit (10, 25, 50)"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "getAllProductByPage",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.1:3100/getAllProductByPage?page=1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"1"
+							],
+							"port": "3100",
+							"path": [
+								"getAllProductByPage"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "get data from page (1, 2, 3)"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "getProdcutByBandCar",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.1:3100/getProdcutByBandCar/ISU",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"1"
+							],
+							"port": "3100",
+							"path": [
+								"getProdcutByBandCar",
+								"ISU"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "getProdcutByStyle",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.1:3100/getProdcutByStyle/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"1"
+							],
+							"port": "3100",
+							"path": [
+								"getProdcutByStyle",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "getProdcutBySize",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.1:3100/getProdcutBySize/Small",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"1"
+							],
+							"port": "3100",
+							"path": [
+								"getProdcutBySize",
+								"Small"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "createIorder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pid\": 2,\r\n  \"styleid\": 2,\r\n  \"sizeid\": 2,\r\n  \"date\": \"2022-02-21\",\r\n  \"status\": 1,\r\n  \"totalprice\": 570000,\r\n  \"uid\": 5\r\n}"
+				},
+				"url": {
+					"raw": "http://192.168.56.1:3100/createIorder",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"56",
+						"1"
+					],
+					"port": "3100",
+					"path": [
+						"createIorder"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "createIorder",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"pid\": 1,\r\n  \"styleid\": 1,\r\n  \"sizeid\": 1,\r\n  \"date\": \"2022-02-22\",\r\n  \"status\": 1,\r\n  \"totalprice\": 571000,\r\n  \"uid\": 5\r\n}"
+						},
+						"url": {
+							"raw": "http://192.168.56.1:3100/createIorder",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"1"
+							],
+							"port": "3100",
+							"path": [
+								"createIorder"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "getAllIorderUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.56.1:3100/getAllIorderUser",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"56",
+						"1"
+					],
+					"port": "3100",
+					"path": [
+						"getAllIorderUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "iorder",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "getAllIorder",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.1:3100/getAllIorder",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"1"
+							],
+							"port": "3100",
+							"path": [
+								"getAllIorder"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "getiorderByDate",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.1:3100/getiorderByDate/2022-02-01",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"1"
+							],
+							"port": "3100",
+							"path": [
+								"getiorderByDate",
+								"2022-02-01"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "getAllIorderButLimit",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.1:3100/getAllIorderButLimit?limit=10",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"1"
+							],
+							"port": "3100",
+							"path": [
+								"getAllIorderButLimit"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "get data (10,25,50)"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "getAllIorderByPage",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.56.1:3100/getAllIorderByPage?page=1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"1"
+							],
+							"port": "3100",
+							"path": [
+								"getAllIorderByPage"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "get data from (1, 2, 3)"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
